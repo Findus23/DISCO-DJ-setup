@@ -1,0 +1,147 @@
+[project]
+name = "discodj_simulation_setup"
+version = "0.1.0"
+description = "Everything needed in a venv to run multigpu discodj simulations"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "asdf>=4.3.0",
+    "astropy>=7.1.0",
+    "discodj",
+    "h5py>=3.14.0",
+    "jax>=0.10.2",
+    "jax-array-info",
+    "jaxtyping>=0.3.3",
+    "matplotlib>=3.10.3",
+    "mpi4py>=4.1.0",
+    "numpy>=2.3.1",
+    "pytest>=9.0.2",
+    "pytest-jax-bench[plot]",
+    "pytest-regressions>=2.9.1",
+    "scipy>=1.16.0",
+    "tqdm>=4.67.1",
+    "hdf5plugin>=6.0.0",
+
+    # in theory those three are only needed as build-dependencies. But as we use --no-build-isolation, we also need to have them installed before compiling DISCO-DJ
+    "nanobind>=3.1.0",
+    "cmake>=4.3.0",
+    "scikit-build-core>=0.12.1",
+    "setuptools-scm>=10.0.4",
+]
+
+[project.optional-dependencies]
+pyqt = [
+    "pyqt6>=6.9.1",
+]
+gpu_cuda12 = [
+    "jax[cuda12]>=0.9.0",
+]
+gpu_cuda12_local = [
+    "jax[cuda12-local]>=0.9.0",
+]
+gpu_cuda13 = [
+    "jax[cuda13]>=0.9.0",
+    "nvidia-cuda-sanitizer-api>=13.1",
+    "nvidia-cuda-cupti>=13.1",
+    "nvidia-cuda-nvcc>=13.1",
+    "nvidia-cuda-nvrtc>=13.1",
+    "nvidia-cuda-runtime>=13.1",
+    "nvidia-nvjitlink>=13.1",
+    "nvidia-nvvm>=13.1",
+    "nvidia-cuda-crt>=13.1",
+    "nvidia-cuda-cccl>=13.1",
+]
+gpu_cuda13_local = [
+    "jax[cuda13-local]>=0.9.0",
+]
+
+personal = [
+    "bpython>=0.25",
+    "pillow>=11.3.0",
+    "pyright>=1.1.408",
+    "pytest>=9.0.2",
+    "ruff>=0.14.13",
+]
+pyvista = [
+    "pyvista>=0.45.3",
+]
+
+cuda_13_only = [
+    "nvidia-cublas",
+    "nvidia-cuda-cupti",
+    "nvidia-cuda-nvcc",
+    "nvidia-cuda-nvrtc",
+    "nvidia-cuda-runtime",
+    "nvidia-cudnn-cu13",
+    "nvidia-cufft",
+    "nvidia-cusolver",
+    "nvidia-cusparse",
+    "nvidia-nccl-cu13",
+    "nvidia-nvjitlink",
+    "nvidia-nvshmem-cu13",
+    "nvidia-nvvm",
+    "nvidia-cuda-sanitizer-api"
+]
+
+cuda_tree = [
+    "cmake>=4.2.3",
+    "jztree",
+    "nanobind>=3.1.0",
+    "scikit-build-core>=0.12.1",
+    "setuptools-scm>=10.0.4",
+]
+
+inference_optimization=[
+    "blackjax>=1.2.5",
+    "corner>=2.2.3",
+    "jaxopt>=0.8.5",
+    "optax>=0.2.5",
+]
+
+docs = [
+    "discodj[dev]",
+]
+discoeb = [
+    "discoeb",
+    "optimistix",
+    "jax-cosmo",
+]
+healpix = [
+    "jax-healpy>=0.8.2",
+    "healpy>=1.18.1",
+]
+notebook = [
+    "ipykernel>=7.2.0",
+    "ipympl>=0.10.0",
+]
+auto-docs = [
+    "ansi2html>=1.9.2",
+    "pytest-html>=4.2.0",
+]
+tools = [
+    "standalone-scatter-gather",
+]
+
+comparions = [
+    "baccoemu>=2.3.0",
+    "camb>=2.0.5",
+    "classy",
+]
+
+[tool.uv]
+no-build-isolation-package = ["jztree", "discodj", "standalone-scatter-gather"]
+reinstall-package = ["jztree", "discodj"]
+# Keep native build artifacts for incremental editable reinstalls, separately per Python/platform.
+config-settings-package = { discodj = { build-dir = "build/{wheel_tag}" } }
+
+[tool.uv.sources]
+jax-array-info = { git = "https://github.com/Findus23/jax-array-info.git" }
+discodj = { path = "../", editable = true }
+jztree = { git = "https://github.com/jstuecker/jztree.git"}
+pytest-jax-bench = { git = "https://github.com/jstuecker/pytest-jax-bench.git" }
+discoeb = { git = "https://github.com/ohahn/DISCO-EB.git" }
+standalone-scatter-gather = { path = "../old/tools/standalone_scatter_gather" }
+jax-cosmo = { git = "https://github.com/christopherlovell/jax_cosmo.git" } # use jax-cosmo fork that fixes pkg_resources for discoeb
+classy = { git = "https://github.com/lesgourg/class_public.git" }
+
+
