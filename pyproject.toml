@@ -127,6 +127,12 @@ comparions = [
     "camb>=2.0.5",
     "classy",
 ]
+ufalcon = [
+    "ufalcon",
+]
+dev = [
+    "jax-ffi-gen",
+]
 
 [tool.uv]
 no-build-isolation-package = ["jztree", "discodj", "standalone-scatter-gather"]
@@ -139,9 +145,11 @@ jax-array-info = { git = "https://github.com/Findus23/jax-array-info.git" }
 discodj = { path = "../", editable = true }
 jztree = { git = "https://github.com/jstuecker/jztree.git"}
 pytest-jax-bench = { git = "https://github.com/jstuecker/pytest-jax-bench.git" }
+jax-ffi-gen = { git = "https://github.com/jstuecker/jax_ffi_gen.git" }
 discoeb = { git = "https://github.com/ohahn/DISCO-EB.git" }
 standalone-scatter-gather = { path = "../old/tools/standalone_scatter_gather" }
 jax-cosmo = { git = "https://github.com/christopherlovell/jax_cosmo.git" } # use jax-cosmo fork that fixes pkg_resources for discoeb
 classy = { git = "https://github.com/lesgourg/class_public.git" }
+ufalcon = { git = "https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ufalcon-published.git", branch = "jax" }
 
 
