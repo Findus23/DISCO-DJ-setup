@@ -134,6 +134,21 @@ comparions = [
 ufalcon = [
     "ufalcon",
 ]
+# the pkdgrav comparison analysis (simulation_data/analysis), which runs in this venv
+analysis = [
+    "discodj_simulation_setup[comparions,healpix,tools]",
+    "asdf>=5.3.0",
+    "bfast",
+    "colossus>=1.4.0",
+    "hfof",
+    "mplcursors>=0.7.1",
+    "pylians",
+    "ruff>=0.16.0",
+    "scipy-stubs>=1.17.1.5",
+    "setproctitle>=1.3.7",
+    "tyro>=1.0.16",
+    "zstandard>=0.25.0",
+]
 dev = [
     "jax-ffi-gen",
 ]
@@ -155,5 +170,8 @@ standalone-scatter-gather = { path = "./standalone_scatter_gather" }
 jax-cosmo = { git = "https://github.com/christopherlovell/jax_cosmo.git" } # use jax-cosmo fork that fixes pkg_resources for discoeb
 classy = { git = "https://github.com/lesgourg/class_public.git" }
 ufalcon = { git = "https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ufalcon-published.git", branch = "jax" }
+bfast = { git = "https://github.com/Findus23/BFast.git", branch = "fork" }
+pylians = { git = "https://github.com/franciscovillaescusa/Pylians3.git" }
+hfof = { git = "https://github.com/pec27/hfof.git" }
 
 
