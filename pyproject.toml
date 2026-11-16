@@ -51,6 +51,10 @@ gpu_cuda13 = [
     "nvidia-cuda-crt>=13.1",
     "nvidia-cuda-cccl>=13.1",
 ]
+cuda13_static_analysis = [
+    "nvidia-cuda-cuobjdump>=13.1",
+    "nvidia-cuda-nvdisasm>=13.1",
+]
 gpu_cuda13_local = [
     "jax[cuda13-local]>=0.9.0",
 ]
@@ -147,7 +151,7 @@ jztree = { git = "https://github.com/jstuecker/jztree.git"}
 pytest-jax-bench = { git = "https://github.com/jstuecker/pytest-jax-bench.git" }
 jax-ffi-gen = { git = "https://github.com/jstuecker/jax_ffi_gen.git" }
 discoeb = { git = "https://github.com/ohahn/DISCO-EB.git" }
-standalone-scatter-gather = { path = "../old/tools/standalone_scatter_gather" }
+standalone-scatter-gather = { path = "./standalone_scatter_gather" }
 jax-cosmo = { git = "https://github.com/christopherlovell/jax_cosmo.git" } # use jax-cosmo fork that fixes pkg_resources for discoeb
 classy = { git = "https://github.com/lesgourg/class_public.git" }
 ufalcon = { git = "https://cosmo-gitlab.phys.ethz.ch/cosmo_public/ufalcon-published.git", branch = "jax" }
