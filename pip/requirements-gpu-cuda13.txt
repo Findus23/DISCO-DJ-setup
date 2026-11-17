@@ -8,7 +8,7 @@ astropy==8.0.2
     # via
     #   discodj-simulation-setup
     #   healpy
-astropy-iers-data==0.2026.10.19.0.52.1
+astropy-iers-data==0.2026.11.9.0.35.9
     # via astropy
 attrs==26.1.0
     # via asdf
@@ -28,7 +28,7 @@ docstring-parser==0.18.0
     #   tyro
 einops==0.8.2
     # via discodj
-fonttools==4.67.0
+fonttools==4.68.0
     # via matplotlib
 graphviz==0.21
     # via pytest-jax-bench
@@ -100,52 +100,52 @@ numpy==2.5.4
     #   pyerfa
     #   pytest-jax-bench
     #   scipy
-nvidia-cublas==13.8.1.7 ; sys_platform == 'linux'
+nvidia-cublas==13.10.0.20 ; sys_platform == 'linux'
     # via
     #   jax-cuda13-plugin
     #   nvidia-cudnn-cu13
     #   nvidia-cusolver
-nvidia-cuda-cccl==13.3.4.3.1
+nvidia-cuda-cccl==13.3.5.0.6
     # via
     #   discodj-simulation-setup
     #   nvidia-nvshmem-cu13
-nvidia-cuda-crt==13.4.92
+nvidia-cuda-crt==13.5.37
     # via
     #   discodj-simulation-setup
     #   nvidia-cuda-nvcc
-nvidia-cuda-cupti==13.4.92
+nvidia-cuda-cupti==13.5.25
     # via
     #   discodj-simulation-setup
     #   jax-cuda13-plugin
-nvidia-cuda-nvcc==13.4.92
+nvidia-cuda-nvcc==13.5.37
     # via
     #   discodj-simulation-setup
     #   jax-cuda13-plugin
-nvidia-cuda-nvrtc==13.4.92
+nvidia-cuda-nvrtc==13.5.37
     # via
     #   discodj-simulation-setup
     #   jax-cuda13-plugin
     #   nvidia-cublas
-nvidia-cuda-runtime==13.4.92
+nvidia-cuda-runtime==13.5.37
     # via
     #   discodj-simulation-setup
     #   jax-cuda13-plugin
     #   nvidia-cuda-nvcc
-nvidia-cuda-sanitizer-api==13.4.92
+nvidia-cuda-sanitizer-api==13.5.25
     # via discodj-simulation-setup
-nvidia-cudnn-cu13==9.27.0.42 ; sys_platform == 'linux'
+nvidia-cudnn-cu13==9.28.1.4 ; sys_platform == 'linux'
     # via jax-cuda13-plugin
-nvidia-cufft==12.4.0.43 ; sys_platform == 'linux'
+nvidia-cufft==12.5.0.14 ; sys_platform == 'linux'
     # via jax-cuda13-plugin
-nvidia-cusolver==12.3.5.3 ; sys_platform == 'linux'
+nvidia-cusolver==12.4.1.2 ; sys_platform == 'linux'
     # via jax-cuda13-plugin
-nvidia-cusparse==12.8.6.72 ; sys_platform == 'linux'
+nvidia-cusparse==12.9.4.2 ; sys_platform == 'linux'
     # via
     #   jax-cuda13-plugin
     #   nvidia-cusolver
 nvidia-nccl-cu13==2.32.3 ; sys_platform == 'linux'
     # via jax-cuda13-plugin
-nvidia-nvjitlink==13.4.92
+nvidia-nvjitlink==13.5.37
     # via
     #   discodj-simulation-setup
     #   jax-cuda13-plugin
@@ -154,12 +154,12 @@ nvidia-nvjitlink==13.4.92
     #   nvidia-cusparse
 nvidia-nvshmem-cu13==3.8.0 ; sys_platform == 'linux'
     # via jax-cuda13-plugin
-nvidia-nvvm==13.4.92
+nvidia-nvvm==13.5.37
     # via
     #   discodj-simulation-setup
     #   jax-cuda13-plugin
     #   nvidia-cuda-nvcc
-nvtx==0.2.16
+nvtx==0.2.17
     # via pytest-jax-bench
 opt-einsum==3.4.0
     # via jax
@@ -186,19 +186,19 @@ pygments==2.21.0
     #   rich
 pyparsing==3.3.3
     # via matplotlib
-pytest==9.1.1
+pytest==9.2.0
     # via
     #   discodj-simulation-setup
     #   pytest-datadir
     #   pytest-jax-bench
     #   pytest-regressions
-pytest-datadir==1.8.0
+pytest-datadir==1.9.0
     # via pytest-regressions
 pytest-jax-bench @ git+https://github.com/jstuecker/pytest-jax-bench.git@eed37f18af0dc74f209d118327ce8d897c990d39
     # via discodj-simulation-setup
 pytest-regressions==2.11.0
     # via discodj-simulation-setup
-python-dateutil==2.9.0.post0
+python-dateutil==4.0.0
     # via matplotlib
 pyyaml==6.0.3
     # via
@@ -210,7 +210,7 @@ rich==15.0.0
     # via
     #   discodj
     #   jax-array-info
-scikit-build-core==1.1.1
+scikit-build-core==1.1.2
     # via discodj-simulation-setup
 scipy==1.18.1
     # via
@@ -220,12 +220,10 @@ scipy==1.18.1
     #   jaxlib
 semantic-version==2.10.0
     # via asdf
-setuptools==84.2.0
+setuptools==84.2.1
     # via setuptools-scm
 setuptools-scm==10.3.4
     # via discodj-simulation-setup
-six==1.17.0
-    # via python-dateutil
 tomli-w==1.2.0
     # via discodj
 tqdm==4.70.1
@@ -237,9 +235,11 @@ typing-extensions==4.16.0
     #   asdf
     #   typeguard
     #   tyro
-tyro==1.0.16
+tyro==1.0.17
     # via discodj
+tzdata==2026.6
+    # via python-dateutil
 vcs-versioning==2.6.0
     # via setuptools-scm
-wadler-lindig==0.1.7
+wadler-lindig==0.1.8
     # via jaxtyping
