@@ -36,7 +36,7 @@ export NCCL_NVLS_ENABLE=1
 
 export TF_CPP_MIN_LOG_LEVEL=0
 
-export XLA_FLAGS="--xla_gpu_enable_latency_hiding_scheduler=true --xla_gpu_allow_ragged_all_to_all_nccl_send_recv_fallback=true --xla_gpu_unsupported_enable_ragged_all_to_all_multi_host_decomposer=false --xla_disable_hlo_passes=rematerialization"
+export XLA_FLAGS="--xla_disable_hlo_passes=rematerialization"
 
 
 # export NCCL_PROFILER_PLUGIN="/home/lw45555/ncclsee/build/libnccl-profiler.so"

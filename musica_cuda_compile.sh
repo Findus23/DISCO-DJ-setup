@@ -34,5 +34,6 @@ python --version
 cd ~/DISCO-DJ/refactor/
 
 
-uv pip install "jax[cuda13]" nvidia-cuda-nvcc "scikit-build-core>=0.12.1" "nanobind>=3.1.0" "cmake>=3.24" "setuptools-scm>=8"
-uv pip install -e ".[all-cuda13]" --no-build-isolation -Cbuild-dir=build/{wheel_tag} -v
+cd own/
+
+uv sync --extra gpu_cuda13 --extra cuda_tree --extra healpix -vv --frozen
