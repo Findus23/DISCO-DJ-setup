@@ -12,12 +12,5 @@
 #SBATCH --partition=zen4_0768_h100x4
 #SBATCH --output output/slurm-%j.out
 
-# Usage: sbatch -N <nodes> [--time HH:MM:SS] [--job-name X] multigpu_musica_nodes.sh <run name> <disco-sim args...>
-# The node count is NOT set here; pass -N/--nodes to sbatch (GPUs follow via --gpus-per-node).
-if [ -z "$SLURM_JOB_NUM_NODES" ]; then
-    echo "run via sbatch -N <nodes> ..." >&2
-    exit 1
-fi
-
 ./multigpu_musica.sh $@
 

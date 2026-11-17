@@ -56,4 +56,3 @@ export BLOSC_NTHREADS=22
 srun --output "own/output/slurm-%2j-%2t.out" ~/nsys/pkg/bin/nsys profile -t nccl,cuda,nvtx,cudnn,cublas,cusparse,cusolver,python-gil --cuda-memory-usage true --cuda-graph-trace=node --output "data/profiler/disco-sim-%q{SLURM_JOB_ID}-%q{SLURM_PROCID}" disco-sim --jax-fixes --ext.output.directory "$OUTPUT_DIR" $@
 # srun --output "own/output/slurm-%2j-%2t.out" disco-sim --jax-fixes --ext.output.directory "$OUTPUT_DIR" $@
 
-
