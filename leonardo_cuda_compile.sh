@@ -25,9 +25,10 @@ export CMAKE_BUILD_PARALLEL_LEVEL=10
 export CUDAARCHS=80
 
 
-pip install -r pip/requirements-gpu-cuda12_local.txt 
+pip install -r pip/requirements-gpu-cuda12_local.txt
 pip install -r pip/requirements-jztree.txt --no-build-isolation
+pip install -r pip/requirements-analysis.txt
 
 cd ../
 pip install -e . --no-build-isolation -vv
-
+pip install -e analysis --no-build-isolation -vv

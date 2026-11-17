@@ -1186,6 +1186,11 @@ requires-dist = [
 provides-extras = ["all", "all-cuda12", "all-cuda13", "dev", "dev-cuda12", "dev-cuda13"]
 
 [[package]]
+name = "discodj-analysis"
+version = "0.0.0"
+source = { editable = "../analysis" }
+
+[[package]]
 name = "discodj-simulation-setup"
 version = "0.1.0"
 source = { virtual = "." }
@@ -1220,6 +1225,7 @@ analysis = [
     { name = "camb" },
     { name = "classy" },
     { name = "colossus" },
+    { name = "discodj-analysis" },
     { name = "healpy" },
     { name = "hfof" },
     { name = "jax-healpy" },
@@ -1352,6 +1358,7 @@ requires-dist = [
     { name = "corner", marker = "extra == 'inference-optimization'", specifier = ">=2.2.3" },
     { name = "discodj", editable = "../" },
     { name = "discodj", extras = ["dev"], marker = "extra == 'docs'", editable = "../" },
+    { name = "discodj-analysis", marker = "extra == 'analysis'", editable = "../analysis" },
     { name = "discodj-simulation-setup", extras = ["comparions", "healpix", "tools"], marker = "extra == 'analysis'" },
     { name = "discoeb", marker = "extra == 'discoeb'", git = "https://github.com/ohahn/DISCO-EB.git" },
     { name = "h5py", specifier = ">=3.14.0" },

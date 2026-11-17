@@ -137,6 +137,7 @@ ufalcon = [
 # the pkdgrav comparison analysis (simulation_data/analysis), which runs in this venv
 analysis = [
     "discodj_simulation_setup[comparions,healpix,tools]",
+    "discodj-analysis",  # editable, simulation_data/analysis (the `discodj_analysis` extension and `results`)
     "asdf>=5.3.0",
     "bfast",
     "colossus>=1.4.0",
@@ -162,6 +163,7 @@ config-settings-package = { discodj = { build-dir = "build/{wheel_tag}" } }
 [tool.uv.sources]
 jax-array-info = { git = "https://github.com/Findus23/jax-array-info.git" }
 discodj = { path = "../", editable = true }
+discodj-analysis = { path = "../analysis", editable = true }  # symlink to simulation_data/analysis
 jztree = { git = "https://github.com/jstuecker/jztree.git"}
 pytest-jax-bench = { git = "https://github.com/jstuecker/pytest-jax-bench.git" }
 jax-ffi-gen = { git = "https://github.com/jstuecker/jax_ffi_gen.git" }

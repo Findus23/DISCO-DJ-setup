@@ -1,4 +1,4 @@
-all: requirements-gpu-cuda13.txt requirements-gpu-cuda12.txt requirements-gpu-cuda13_local.txt requirements-gpu-cuda12_local.txt requirements-local-testing.txt requirements-jztree.txt
+all: requirements-gpu-cuda13.txt requirements-gpu-cuda12.txt requirements-gpu-cuda13_local.txt requirements-gpu-cuda12_local.txt requirements-local-testing.txt requirements-jztree.txt requirements-analysis.txt
 
 
 requirements-gpu-cuda13.txt: uv.lock
@@ -13,4 +13,5 @@ requirements-local-testing.txt: uv.lock
 	uv export --frozen --no-hashes --extra personal --extra healpix -o requirements-local-testing.txt --no-emit-package discodj
 requirements-jztree.txt: uv.lock
 	uv export --frozen --no-hashes --extra cuda_tree -o requirements-jztree.txt --no-emit-package discodj
-
+requirements-analysis.txt: uv.lock
+	uv export --frozen --no-hashes --extra analysis -o requirements-analysis.txt --no-emit-package discodj --no-emit-package discodj-analysis

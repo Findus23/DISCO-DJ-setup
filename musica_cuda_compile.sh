@@ -36,4 +36,4 @@ cd ~/DISCO-DJ/refactor/
 
 cd own/
 
-uv sync --extra gpu_cuda13 --extra cuda_tree --extra healpix -vv --frozen
+uv sync --extra gpu_cuda13 --extra cuda_tree --extra healpix --extra analysis -vv --frozen
