@@ -24,6 +24,8 @@ babel==2.18.0
     # via sphinx
 baccoemu==2.3.0
     # via discodj-simulation-setup
+backports-zstd==1.8.0 ; python_full_version < '3.14'
+    # via discodj-simulation-setup
 bfast @ git+https://github.com/Findus23/BFast.git@0f0e49744a8d2cf614213c61ec929328514b904b
     # via discodj-simulation-setup
 blosc2==4.14.1

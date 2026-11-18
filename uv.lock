@@ -1197,6 +1197,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "asdf" },
     { name = "astropy" },
+    { name = "backports-zstd", marker = "python_full_version < '3.14'" },
     { name = "cmake" },
     { name = "discodj" },
     { name = "h5py" },
@@ -1347,6 +1348,7 @@ requires-dist = [
     { name = "asdf", marker = "extra == 'analysis'", specifier = ">=5.3.0" },
     { name = "astropy", specifier = ">=7.1.0" },
     { name = "baccoemu", marker = "extra == 'comparions'", specifier = ">=2.3.0" },
+    { name = "backports-zstd", marker = "python_full_version < '3.14'" },
     { name = "bfast", marker = "extra == 'analysis'", git = "https://github.com/Findus23/BFast.git?branch=fork" },
     { name = "blackjax", marker = "extra == 'inference-optimization'", specifier = ">=1.2.5" },
     { name = "bpython", marker = "extra == 'personal'", specifier = ">=0.25" },

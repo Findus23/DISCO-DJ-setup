@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "asdf>=4.3.0",
+    "backports.zstd; python_version < '3.14'",
     "astropy>=7.1.0",
     "discodj",
     "h5py>=3.14.0",

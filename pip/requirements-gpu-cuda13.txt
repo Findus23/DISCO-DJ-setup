@@ -12,6 +12,8 @@ astropy-iers-data==0.2026.11.9.0.35.9
     # via astropy
 attrs==26.1.0
     # via asdf
+backports-zstd==1.8.0 ; python_full_version < '3.14'
+    # via discodj-simulation-setup
 cmake==4.4.4
     # via discodj-simulation-setup
 colorama==0.4.6 ; sys_platform == 'win32'
