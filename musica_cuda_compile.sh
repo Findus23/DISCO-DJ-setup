@@ -36,4 +36,6 @@ cd ~/DISCO-DJ/refactor/
 
 cd own/
 
+export UV_PROJECT_ENVIRONMENT="$VIRTUAL_ENV";
+
 uv sync --extra gpu_cuda13 --extra cuda_tree --extra healpix --extra analysis -vv --frozen
